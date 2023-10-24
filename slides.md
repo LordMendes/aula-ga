@@ -207,13 +207,6 @@ No nosso exemplo vamos usar somente a cor do besouro para definir a capacidade d
   <img src="https://github.com/LordMendes/aula-ga/blob/master/assets/besouros/besouro-verde.png?raw=true" />
 </div>
 
-<!--   
-- **Indivíduo**: Uma representação de uma possível solução para o problema.
-- **População**: Um conjunto de indivíduos que representam possíveis soluções para o problema.
-- **Aptidão**: Uma medida de quão bem um indivíduo resolve o problema.
-- **Reprodução**: O processo de geração de novos indivíduos a partir de indivíduos existentes.
-- **Seleção**: O processo de escolha dos indivíduos mais aptos para se reproduzirem.
-- **Mutação**: O processo de introdução de alterações aleatórias em indivíduos. -->
 
 ---
 layout: default
@@ -227,5 +220,137 @@ transition: slide-up
 O exemplo ajuda entender o processo de reprodução já que podemos assimilar o cruzamento entre diferentes besouros que irão gerar um novo besouro que herdará algumas caracteristicas dos pais
 
 <div>
-<img src="https://github.com/LordMendes/aula-ga/blob/master/assets/conceitos/crossover-copula.jpg?raw=true">
+  <img src="https://github.com/LordMendes/aula-ga/blob/master/assets/conceitos/crossover-copula.jpg?raw=true" class="h-40">
 </div>
+
+---
+layout: default
+transition: slide-up
+---
+
+# Reprodução / Crossover
+
+<div>
+  <div class="flex flex-row w-auto justify-around">
+    <div class="w-66 flex flex-col justify-center ">
+      <div class="flex justify-center w-auto">
+        <span class="text-[#6232ff] font-black text-xl">Parent 1</span>
+      </div>
+      <div class="w-auto flex justify-around">
+        <span>100</span>
+        <span>50</span>
+        <span>255</span>
+      </div>
+      <div>
+        <span>01100100 00110010 11111111</span>
+      </div>
+    </div>
+    <div class="w-66 flex flex-col justify-center ">
+      <div class="flex justify-center w-auto">
+        <span class="text-[#24b28c] font-black text-xl">Parent 2</span>
+      </div>
+      <div class="w-auto flex justify-around">
+        <span>36</span>
+        <span>178</span>
+        <span>141</span>
+      </div>
+      <div>
+        <span>00100100 10110010 10001101</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="h-10"></div>
+
+  <div class="flex flex-row w-auto justify-around">
+    <div class="w-68 flex flex-col justify-center ">
+      <div>
+        <span>011001000 &nbsp&nbsp 011001011111111</span>
+      </div>
+    </div>
+    <div class="w-68 flex flex-col justify-center ">
+      <div>
+        <span>001001001 &nbsp&nbsp 011001010001101</span>
+      </div>
+    </div>
+  </div>
+  <Arrow x1="200" y1="280" x2="620" y2="375" />
+  <Arrow x1="330" y1="280" x2="330" y2="375" />
+
+  <Arrow x1="620" y1="280" x2="200" y2="375" />
+  <Arrow x1="750" y1="280" x2="750" y2="375" />
+
+  <div class="h-25"></div>
+
+  <div class="flex flex-row w-auto justify-around">
+    <div class="w-68 flex flex-col justify-center ">
+      <div>
+        <span>001001001 &nbsp&nbsp 011001011111111</span>
+      </div>
+    </div>
+    <div class="w-68 flex flex-col justify-center ">
+      <div>
+        <span>011001000 &nbsp&nbsp 011001010001101</span>
+      </div>
+    </div>
+  </div>
+  <div class="h-10"></div>
+  <div class="flex flex-row w-auto justify-around">
+    <div class="w-66 flex flex-col justify-center ">
+      <div class="flex justify-center w-auto">
+        <span class="text-[#24b2ff] font-black text-xl">Child 1</span>
+      </div>
+      <div class="w-auto flex justify-around">
+        <span>36</span>
+        <span>178</span>
+        <span>255</span>
+      </div>
+      <div>
+        <span>00100100 10110010 11111111</span>
+      </div>
+    </div>
+    <div class="w-66 flex flex-col justify-center ">
+      <div class="flex justify-center w-auto">
+        <span class="text-[#64328d] font-black text-xl">Child 2</span>
+      </div>
+      <div class="w-auto flex justify-around">
+        <span>100</span>
+        <span>50</span>
+        <span>141</span>
+      </div>
+      <div>
+        <span>01100100 00110010 10001101</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+---
+layout: default
+transition: slide-up
+---
+
+# Reprodução / Crossover
+
+Com base no exemplo anterior conseguimos ver como as alterações vão acontecer conforme o cruzamento de genes acontece, formando uma nova **geração** de **Indivíduos** com novas aptidões.
+
+<div class="flex justify-center">
+  <img src="https://github.com/LordMendes/aula-ga/blob/master/assets/conceitos/crossover.png?raw=true" class="h-60">
+</div>
+
+<!--   
+- **Indivíduo**: Uma representação de uma possível solução para o problema.
+- **População**: Um conjunto de indivíduos que representam possíveis soluções para o problema.
+- **Aptidão**: Uma medida de quão bem um indivíduo resolve o problema.
+- **Reprodução**: O processo de geração de novos indivíduos a partir de indivíduos existentes.
+- **Seleção**: O processo de escolha dos indivíduos mais aptos para se reproduzirem.
+- **Mutação**: O processo de introdução de alterações aleatórias em indivíduos. 
+- -->
+
+---
+layout: default
+transition: slide-up
+---
+
+# Seleção \ Selection
