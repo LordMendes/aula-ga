@@ -11,9 +11,12 @@ info: |
   Learn more at [Sli.dev](https://sli.dev)
 drawings:
   persist: false
+  presenterOnly: true
 transition: slide-left
-title: Welcome to Slidev
+title: Algoritmo Genético
 mdc: true
+presenter: true
+download: true
 ---
 
 # Algoritmo Genético
