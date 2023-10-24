@@ -115,7 +115,9 @@ background: https://miro.medium.com/v2/resize:fit:1400/0*iacUogN9OLOqdPYY
 # O que são Algoritmos Genéticos
 Principais Conceitos
 
-
+<!--
+Introduzir a existencia de conceitos, proximo slide já contém os conceitos
+-->
 
 ---
 layout: default
@@ -219,8 +221,8 @@ transition: slide-up
 
 O exemplo ajuda entender o processo de reprodução já que podemos assimilar o cruzamento entre diferentes besouros que irão gerar um novo besouro que herdará algumas caracteristicas dos pais
 
-<div>
-  <img src="https://github.com/LordMendes/aula-ga/blob/master/assets/conceitos/crossover-copula.jpg?raw=true" class="h-40">
+<div class="flex justify-center h-50">
+  <img src="https://github.com/LordMendes/aula-ga/blob/master/assets/conceitos/crossover-copula.jpg?raw=true">
 </div>
 
 ---
