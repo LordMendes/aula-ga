@@ -11,7 +11,6 @@ info: |
   Learn more at [Sli.dev](https://sli.dev)
 drawings:
   persist: false
-  presenterOnly: true
 transition: slide-left
 title: Algoritmo Genético
 mdc: true
