@@ -46,7 +46,7 @@ layout: about-me
 
 helloMsg: Sobre mim!
 name: Lucas C. Mendes
-imageSrc: assets/about-me.jpeg
+imageSrc: https://github.com/LordMendes/aula-ga/blob/master/assets/about-me.jpeg?raw=true
 job: Tech lead
 line1: 
 line2: 
@@ -150,7 +150,7 @@ transition: slide-up
 
 Isso é representado no nosso exemplo por todos os besouros presentes na **POPULAÇÃO**  da ilha
 <div class="w-auto flex justify-center">
-  <img src="https://github.com/LordMendes/aula-ga/blob/master/assets/conceitos/populacao.png?raw=true" class="h-100"/>
+  <img src="https://github.com/LordMendes/aula-ga/blob/master/assets/conceitos/populacao.png?raw=true" class="h-110"/>
 </div>
 
 ---
