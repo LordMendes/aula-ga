@@ -115,13 +115,6 @@ background: https://miro.medium.com/v2/resize:fit:1400/0*iacUogN9OLOqdPYY
 # O que são Algoritmos Genéticos
 Principais Conceitos
 
-<!--   
-- **Indivíduo**: Uma representação de uma possível solução para o problema.
-- **População**: Um conjunto de indivíduos que representam possíveis soluções para o problema.
-- **Aptidão**: Uma medida de quão bem um indivíduo resolve o problema.
-- **Seleção**: O processo de escolha dos indivíduos mais aptos para se reproduzirem.
-- **Reprodução**: O processo de geração de novos indivíduos a partir de indivíduos existentes.
-- **Mutação**: O processo de introdução de alterações aleatórias em indivíduos. -->
 
 
 ---
@@ -129,7 +122,7 @@ layout: default
 transition: slide-up
 ---
 
-# Indivíduo
+# Indivíduo / Individual
 
 ## Uma representação de uma possível solução para o problema.
 
@@ -140,11 +133,42 @@ No nosso exemplo as possíveis soluções são representadas pelos diversos beso
 </div>
 
 ---
+layout: two-cols
+transition: slide-up
+---
+# Fenótipo
+<div class="p-4">
+
+É a representação externa de uma solução, que é a maneira como a solução se comporta no mundo real
+
+No exemplo podemos dizer que o fenótipo é o RGB da cor do besouro
+```css
+.besouro {
+  color: rgb(100,50,255);
+}
+```
+</div>
+::right::
+<div class="p-4">
+
+# Genótipo
+É a representação interna de uma solução, que é composta de genes. Os genes são unidades básicas de informação que podem ser combinadas para formar diferentes soluções.
+
+Para facilitar as operações como a fitness, é melhor encontrar uma forma de converter o fenótipo em algo como um binário
+
+```python
+"01100100|00110010|11111111"
+    RED  | GREEN  |  BLUE
+```
+No caso criamos um binário de 30 digitos onde cada 10 representam uma informação do RGB
+</div>
+
+---
 layout: default
 transition: slide-up
 ---
 
-# População
+# População / Population
 
 ## Um conjunto de indivíduos que representam possíveis soluções para o problema.
 
@@ -154,3 +178,54 @@ Isso é representado no nosso exemplo por todos os besouros presentes na **POPUL
 </div>
 
 ---
+layout: default
+transition: slide-up
+---
+
+# Aptidão / Fitness
+
+## Uma medida de quão bem um indivíduo resolve o problema.
+
+É Literalmente uma "Nota" que é dada para a capacidade de sobrevivência de um indivíduo no ambiente
+
+Geralmente é a parte mais problemática da construção de um GA, pois definir parametros que tornam o indivíduo apto pode ser complexo.
+
+No nosso exemplo vamos usar somente a cor do besouro para definir a capacidade de adaptação dele no ambiente
+
+<div grid="~ cols-6">
+  <div class="flex justify-center"><span>0.27</span></div>
+  <div class="flex justify-center"><span>0.38</span></div>
+  <div class="flex justify-center"><span>0.45</span></div>
+  <div class="flex justify-center"><span>0.71</span></div>
+  <div class="flex justify-center"><span>0.83</span></div>
+  <div class="flex justify-center"><span>0.97</span></div>
+  <img src="https://github.com/LordMendes/aula-ga/blob/master/assets/besouros/besouro-amarelo.png?raw=true" />
+  <img src="https://github.com/LordMendes/aula-ga/blob/master/assets/besouros/besouro-rosa.png?raw=true" />
+  <img src="https://github.com/LordMendes/aula-ga/blob/master/assets/besouros/besouro-vermelho.png?raw=true" />
+  <img src="https://github.com/LordMendes/aula-ga/blob/master/assets/besouros/besouro-preto.png?raw=true" />
+  <img src="https://github.com/LordMendes/aula-ga/blob/master/assets/besouros/besouro-azul.png?raw=true" />
+  <img src="https://github.com/LordMendes/aula-ga/blob/master/assets/besouros/besouro-verde.png?raw=true" />
+</div>
+
+<!--   
+- **Indivíduo**: Uma representação de uma possível solução para o problema.
+- **População**: Um conjunto de indivíduos que representam possíveis soluções para o problema.
+- **Aptidão**: Uma medida de quão bem um indivíduo resolve o problema.
+- **Reprodução**: O processo de geração de novos indivíduos a partir de indivíduos existentes.
+- **Seleção**: O processo de escolha dos indivíduos mais aptos para se reproduzirem.
+- **Mutação**: O processo de introdução de alterações aleatórias em indivíduos. -->
+
+---
+layout: default
+transition: slide-up
+---
+
+# Reprodução / Crossover
+
+## O processo de geração de novos indivíduos a partir de indivíduos existentes.
+
+O exemplo ajuda entender o processo de reprodução já que podemos assimilar o cruzamento entre diferentes besouros que irão gerar um novo besouro que herdará algumas caracteristicas dos pais
+
+<div>
+<img >
+</div>
