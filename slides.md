@@ -149,3 +149,8 @@ transition: slide-up
 ## Um conjunto de indivíduos que representam possíveis soluções para o problema.
 
 Isso é representado no nosso exemplo por todos os besouros presentes na **POPULAÇÃO**  da ilha
+<div class="w-auto flex justify-center">
+  <img src="https://github.com/LordMendes/aula-ga/blob/master/assets/conceitos/populacao.png?raw=true" class="h-100"/>
+</div>
+
+---
