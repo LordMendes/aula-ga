@@ -2,8 +2,8 @@
   "name": "aula-ga",
   "private": true,
   "scripts": {
-    "build": "slidev build --remote=123456",
-    "dev": "slidev --open",
+    "build": "slidev build",
+    "dev": "slidev --open --remote=12345",
     "export": "slidev export"
   },
   "dependencies": {

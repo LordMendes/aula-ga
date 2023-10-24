@@ -46,17 +46,19 @@ The last comment block of each slide will be treated as slide notes. It will be 
 
 ---
 layout: about-me
-
 helloMsg: Sobre mim!
 name: Lucas C. Mendes
-imageSrc: https://github.com/LordMendes/aula-ga/blob/master/assets/about-me.jpeg?raw=true
+imageSrc: >-
+  https://github.com/LordMendes/aula-ga/blob/master/assets/about-me.jpeg?raw=true
 job: Tech lead
-line1: 
-line2: 
+line1: null
+line2: null
 social1: LinkedIn @lucas-c-mendes
 social2: Github @lordmendes
-social3: 
+social3: null
 ---
+
+
 
 ---
 transition: fade-out
