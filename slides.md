@@ -113,10 +113,39 @@ background: https://miro.medium.com/v2/resize:fit:1400/0*iacUogN9OLOqdPYY
 ---
 
 # O que são Algoritmos Genéticos
+Principais Conceitos
+
+<!--   
+- **Indivíduo**: Uma representação de uma possível solução para o problema.
+- **População**: Um conjunto de indivíduos que representam possíveis soluções para o problema.
+- **Aptidão**: Uma medida de quão bem um indivíduo resolve o problema.
+- **Seleção**: O processo de escolha dos indivíduos mais aptos para se reproduzirem.
+- **Reprodução**: O processo de geração de novos indivíduos a partir de indivíduos existentes.
+- **Mutação**: O processo de introdução de alterações aleatórias em indivíduos. -->
+
 
 ---
 layout: default
 transition: slide-up
 ---
 
-# teste
+# Indivíduo
+
+## Uma representação de uma possível solução para o problema.
+
+No nosso exemplo as possíveis soluções são representadas pelos diversos besouros e através deles vamos tentar encontrar as carácteristicas que permitem ele sobreviver na ilha.
+<div grid="~ cols-2" class="w-auto h-75">
+  <img src="https://github.com/LordMendes/aula-ga/blob/master/assets/besouros/besouro-verde.png?raw=true" class="h-75"/>
+  <img src="https://github.com/LordMendes/aula-ga/blob/master/assets/besouros/besouro-amarelo.png?raw=true" class="h-75"/>
+</div>
+
+---
+layout: default
+transition: slide-up
+---
+
+# População
+
+## Um conjunto de indivíduos que representam possíveis soluções para o problema.
+
+Isso é representado no nosso exemplo por todos os besouros presentes na **POPULAÇÃO**  da ilha
