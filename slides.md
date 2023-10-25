@@ -395,7 +395,11 @@ transition: slide-up
 Provavelmente o método mais usado, o torneio se dá da seguinte forma:
 - 2 ou mais membros são escolhidos aleatoriamente na população
 - É feita uma comparação entre os dois e selecionamos o com a maior fitness para o crossover
-  
+
+<div class="w-auto flex justify-center">
+  <img src="https://github.com/LordMendes/aula-ga/blob/master/assets/conceitos/tournament.png?raw=true" class="h-60"/>
+</div>
+
 ---
 layout: default
 transition: slide-up
