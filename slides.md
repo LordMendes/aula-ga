@@ -524,6 +524,14 @@ transition: slide-up
 # Fitness
 ## Agora o algoritmo avaliará cada individuo da população
 
+<!--
+Tendo em vista que RGB é um vetor 3D usamos a relação da distancia euclidiana dividida pela distancia máxima para saber o quão proxima uma cor é da cor alvo
+fitness= 1 − (distance/maxDistance)
+​
+
+
+-->
+
 <div grid="~ cols-6 gap-4" class="mt-8">
   <Beetle fill="#E7A8F3" class="w-50" showFitnessScore="true"/>
   <Beetle fill="#7BD6A1" class="w-50" showFitnessScore="true"/>
