@@ -470,3 +470,7 @@ transition: slide-up
 ---
 
 # Ciclo Evolutivo
+
+<div class="w-auto flex justify-center">
+  <img src="https://github.com/LordMendes/aula-ga/blob/master/assets/conceitos/workflow.png?raw=true" class="h-90"/>
+</div>
