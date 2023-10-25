@@ -487,12 +487,34 @@ transition: slide-up
 Juntando todos os conceitos com o nosso exemplo de besouros teríamos algo assim:
 ## Primeiramente iniciamos uma população com N indivíduos aleatórios
 <div grid="~ cols-6">
-  <img src="https://github.com/LordMendes/aula-ga/blob/master/assets/besouros/besouro-amarelo.png?raw=true" />
-  <img src="https://github.com/LordMendes/aula-ga/blob/master/assets/besouros/besouro-rosa.png?raw=true" />
-  <img src="https://github.com/LordMendes/aula-ga/blob/master/assets/besouros/besouro-vermelho.png?raw=true" />
-  <img src="https://github.com/LordMendes/aula-ga/blob/master/assets/besouros/besouro-preto.png?raw=true" />
-  <img src="https://github.com/LordMendes/aula-ga/blob/master/assets/besouros/besouro-azul.png?raw=true" />
-  <img src="https://github.com/LordMendes/aula-ga/blob/master/assets/besouros/besouro-verde.png?raw=true" />
+  <Beetle class="w-50"/>
+  <Beetle class="w-50"/>
+  <Beetle class="w-50"/>
+  <Beetle class="w-50"/>
+  <Beetle class="w-50"/>
+  <Beetle class="w-50"/>
+  
+  <Beetle class="w-50"/>
+  <Beetle class="w-50"/>
+  <Beetle class="w-50"/>
+  <Beetle class="w-50"/>
+  <Beetle class="w-50"/>
+  <Beetle class="w-50"/>
+  
+  <Beetle class="w-50"/>
+  <Beetle class="w-50"/>
+  <Beetle class="w-50"/>
+  <Beetle class="w-50"/>
+  <Beetle class="w-50"/>
+  <Beetle class="w-50"/>
+  
+  <Beetle class="w-50"/>
+  <Beetle class="w-50"/>
+  <Beetle class="w-50"/>
+  <Beetle class="w-50"/>
+  <Beetle class="w-50"/>
+  <Beetle class="w-50"/>
+  
 </div>
 
 ---
