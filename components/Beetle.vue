@@ -12,27 +12,52 @@ const props = defineProps({
   fill: {
     default: null,
   },
+  showFitnessScore: {
+    default: false,
+  },
 });
 
 const fillColor = ref(props.fill ? props.fill : hex);
+
+// Function to calculate fitness score
+const calculateFitnessScore = (color) => {
+  // Convert hex color to RGB
+  const r = parseInt(color.substring(1, 3), 16);
+  const g = parseInt(color.substring(3, 5), 16);
+  const b = parseInt(color.substring(5, 7), 16);
+
+  // Calculate Euclidean distance
+  const distance = Math.sqrt((r - 0) ** 2 + (g - 255) ** 2 + (b - 0) ** 2);
+
+  // Fitness score formula (adjust this based on desired range and scale)
+  const maxDistance = Math.sqrt(255 ** 2 + 255 ** 2 + 255 ** 2);
+  const fitness = 1 - distance / maxDistance;
+
+  return fitness;
+};
+
+// Calculate fitness score based on the initial fill color
+const fitnessScore = calculateFitnessScore(fillColor.value).toPrecision(2);
 </script>
 
 <template>
-  <svg
-    version="1.0"
-    xmlns="http://www.w3.org/2000/svg"
-    width="400.000000pt"
-    height="50.000000pt"
-    viewBox="0 0 527.000000 474.000000"
-    preserveAspectRatio="xMidYMid meet"
-  >
-    <g
-      transform="translate(0.000000,474.000000) scale(0.100000,-0.100000)"
-      :fill="fillColor"
-      stroke="none"
+  <div class="flex flex-col justify-center items-center">
+    <span v-if="showFitnessScore">{{ fitnessScore }}</span>
+    <svg
+      version="1.0"
+      xmlns="http://www.w3.org/2000/svg"
+      width="400.000000pt"
+      height="30.000000pt"
+      viewBox="0 0 527.000000 474.000000"
+      preserveAspectRatio="xMidYMid meet"
     >
-      <path
-        d="M1753 4376 c-55 -25 -75 -69 -70 -153 8 -135 89 -253 215 -311 45
+      <g
+        transform="translate(0.000000,474.000000) scale(0.100000,-0.100000)"
+        :fill="fillColor"
+        stroke="none"
+      >
+        <path
+          d="M1753 4376 c-55 -25 -75 -69 -70 -153 8 -135 89 -253 215 -311 45
 -20 77 -27 150 -30 91 -4 93 -5 86 -26 -4 -11 -9 -160 -11 -331 l-4 -309 -77
 -81 c-42 -44 -95 -108 -117 -142 -22 -35 -42 -62 -45 -60 -159 80 -316 160
 -318 162 -2 2 -25 148 -51 324 -32 212 -53 327 -63 338 -189 223 -443 503
@@ -65,7 +90,8 @@ const fillColor = ref(props.fill ? props.fill : hex);
 31 70 0 c208 0 368 138 388 337 10 94 -37 161 -118 170 -80 8 -139 -45 -153
 -139 -3 -21 -17 -50 -30 -65 l-23 -28 -612 -3 -612 -2 -34 34 c-24 24 -34 43
 -34 65 0 99 -107 168 -197 127z"
-      />
-    </g>
-  </svg>
+        />
+      </g>
+    </svg>
+  </div>
 </template>

@@ -486,35 +486,34 @@ transition: slide-up
 
 Juntando todos os conceitos com o nosso exemplo de besouros teríamos algo assim:
 ## Primeiramente iniciamos uma população com N indivíduos aleatórios
-<div grid="~ cols-6">
-  <Beetle class="w-50"/>
-  <Beetle class="w-50"/>
-  <Beetle class="w-50"/>
-  <Beetle class="w-50"/>
-  <Beetle class="w-50"/>
-  <Beetle class="w-50"/>
+<div grid="~ cols-6 gap-4" class="mt-8">
+  <Beetle fill="#E7A8F3" class="w-50"/>
+  <Beetle fill="#7BD6A1" class="w-50"/>
+  <Beetle fill="#34F2A9" class="w-50"/>
+  <Beetle fill="#1D9B6C" class="w-50"/>
+  <Beetle fill="#C83E4A" class="w-50"/>
+  <Beetle fill="#F97C3D" class="w-50"/>
   
-  <Beetle class="w-50"/>
-  <Beetle class="w-50"/>
-  <Beetle class="w-50"/>
-  <Beetle class="w-50"/>
-  <Beetle class="w-50"/>
-  <Beetle class="w-50"/>
+  <Beetle fill="#8EC20B" class="w-50"/>
+  <Beetle fill="#A1F0B8" class="w-50"/>
+  <Beetle fill="#0B75D9" class="w-50"/>
+  <Beetle fill="#9D1F6A" class="w-50"/>
+  <Beetle fill="#4F69C3" class="w-50"/>
+  <Beetle fill="#5AC8B0" class="w-50"/>
   
-  <Beetle class="w-50"/>
-  <Beetle class="w-50"/>
-  <Beetle class="w-50"/>
-  <Beetle class="w-50"/>
-  <Beetle class="w-50"/>
-  <Beetle class="w-50"/>
+  <Beetle fill="#3D9EFA" class="w-50"/>
+  <Beetle fill="#DA7F0D" class="w-50"/>
+  <Beetle fill="#F55A8E" class="w-50"/>
+  <Beetle fill="#6E1B4C" class="w-50"/>
+  <Beetle fill="#23A5E9" class="w-50"/>
+  <Beetle fill="#B64D2F" class="w-50"/>
   
-  <Beetle class="w-50"/>
-  <Beetle class="w-50"/>
-  <Beetle class="w-50"/>
-  <Beetle class="w-50"/>
-  <Beetle class="w-50"/>
-  <Beetle class="w-50"/>
-  
+  <Beetle fill="#FD3C7B" class="w-50"/>
+  <Beetle fill="#0F8D92" class="w-50"/>
+  <Beetle fill="#57E648" class="w-50"/>
+  <Beetle fill="#D14A21" class="w-50"/>
+  <Beetle fill="#8316F9" class="w-50"/>
+  <Beetle fill="#E292C7" class="w-50"/>  
 </div>
 
 ---
@@ -522,4 +521,196 @@ layout: default
 transition: slide-up
 ---
 
-# Pressão Evolutiva
+# Fitness
+## Agora o algoritmo avaliará cada individuo da população
+
+<div grid="~ cols-6 gap-4" class="mt-8">
+  <Beetle fill="#E7A8F3" class="w-50" showFitnessScore="true"/>
+  <Beetle fill="#7BD6A1" class="w-50" showFitnessScore="true"/>
+  <Beetle fill="#34F2A9" class="w-50" showFitnessScore="true"/>
+  <Beetle fill="#1D9B6C" class="w-50" showFitnessScore="true"/>
+  <Beetle fill="#C83E4A" class="w-50" showFitnessScore="true"/>
+  <Beetle fill="#F97C3D" class="w-50" showFitnessScore="true"/>
+  
+  <Beetle fill="#8EC20B" class="w-50" showFitnessScore="true"/>
+  <Beetle fill="#A1F0B8" class="w-50" showFitnessScore="true"/>
+  <Beetle fill="#0B75D9" class="w-50" showFitnessScore="true"/>
+  <Beetle fill="#9D1F6A" class="w-50" showFitnessScore="true"/>
+  <Beetle fill="#4F69C3" class="w-50" showFitnessScore="true"/>
+  <Beetle fill="#5AC8B0" class="w-50" showFitnessScore="true"/>
+  
+  <Beetle fill="#3D9EFA" class="w-50" showFitnessScore="true"/>
+  <Beetle fill="#DA7F0D" class="w-50" showFitnessScore="true"/>
+  <Beetle fill="#F55A8E" class="w-50" showFitnessScore="true"/>
+  <Beetle fill="#6E1B4C" class="w-50" showFitnessScore="true"/>
+  <Beetle fill="#23A5E9" class="w-50" showFitnessScore="true"/>
+  <Beetle fill="#B64D2F" class="w-50" showFitnessScore="true"/>
+  
+  <Beetle fill="#FD3C7B" class="w-50" showFitnessScore="true"/>
+  <Beetle fill="#0F8D92" class="w-50" showFitnessScore="true"/>
+  <Beetle fill="#57E648" class="w-50" showFitnessScore="true"/>
+  <Beetle fill="#D14A21" class="w-50" showFitnessScore="true"/>
+  <Beetle fill="#8316F9" class="w-50" showFitnessScore="true"/>
+  <Beetle fill="#E292C7" class="w-50" showFitnessScore="true"/>  
+</div>
+
+---
+layout: default
+transition: slide-up
+---
+
+# Seleção
+## Usaremos o método de torneio para o exemplo
+<div class="flex flex-col">
+  <div class="flex flex-row justify-center items-center">
+    <div class="flex flex-row justify-center items-center p-8">
+      <Beetle fill="#E292C7" class="w-30" showFitnessScore="true"/>
+      VS
+      <Beetle fill="#1D9B6C" class="w-30" showFitnessScore="true"/>
+      =
+      <Beetle fill="#1D9B6C" class="w-30" showFitnessScore="true"/>
+    </div>
+    <div class="flex flex-row justify-center items-center p-8">
+      <Beetle fill="#D14A21" class="w-30" showFitnessScore="true"/>
+      VS
+      <Beetle fill="#23A5E9" class="w-30" showFitnessScore="true"/>
+      =
+      <Beetle fill="#23A5E9" class="w-30" showFitnessScore="true"/>
+    </div>
+  </div>
+
+  <div class="flex flex-row justify-center items-center">
+    <div class="flex flex-row justify-center items-center p-8">
+      <Beetle fill="#F55A8E" class="w-30" showFitnessScore="true"/>
+      VS
+      <Beetle fill="#A1F0B8" class="w-30" showFitnessScore="true"/>
+      =
+      <Beetle fill="#A1F0B8" class="w-30" showFitnessScore="true"/>
+    </div>
+    <div class="flex flex-row justify-center items-center p-8">
+      <Beetle fill="#C83E4A" class="w-30" showFitnessScore="true"/>
+      VS
+      <Beetle fill="#8316F9" class="w-30" showFitnessScore="true"/>
+      =
+      <Beetle fill="#C83E4A" class="w-30" showFitnessScore="true"/>
+    </div>
+  </div>
+
+  <div class="flex flex-row justify-center items-center">
+    <div class="flex flex-row justify-center items-center p-8">
+      <Beetle fill="#8EC20B" class="w-30" showFitnessScore="true"/>
+      VS
+      <Beetle fill="#1D9B6C" class="w-30" showFitnessScore="true"/>
+      =
+      <Beetle fill="#1D9B6C" class="w-30" showFitnessScore="true"/>
+    </div>
+    <div class="flex flex-row justify-center items-center p-8">
+      <Beetle fill="#6E1B4C" class="w-30" showFitnessScore="true"/>
+      VS
+      <Beetle fill="#DA7F0D" class="w-30" showFitnessScore="true"/>
+      =
+      <Beetle fill="#6E1B4C" class="w-30" showFitnessScore="true"/>
+    </div>
+  </div>
+
+</div>
+
+---
+layout: default
+transition: slide-up
+---
+
+# Crossover
+<!-- ## Pegamos os indivíduos selecionados e realizamos o crossover -->
+
+<div class="flex flex-col justify-center items-center">
+  <div class="flex flex-row justify-center items-center">
+    <div class="flex flex-col items-center p-2">
+      <Beetle fill="#1D9B6C" class="w-30" showFitnessScore="true"/>
+      <span >1D9B6C</span>
+      <span class="text-xs"><span class="text-red">0001110</span> <span class="text-blue">11001101101101100</span></span>
+    </div>
+    <div class="flex flex-col items-center p-2">
+      <Beetle fill="#23A5E9" class="w-30" showFitnessScore="true"/>
+      <span>23A5E9</span>
+      <span class="text-xs"><span class="text-blue">0010001</span> <span class="text-red">11010010111101001</span></span>
+    </div>
+    <carbon:arrow-right class="inline"/>
+    <div class="flex flex-row gap-4">
+      <div class="flex flex-row gap-4">
+        <div class="flex flex-col justify-center items-center">
+          <Beetle fill="#1DA5E9" class="w-30" showFitnessScore="true"/>
+          <span>1DA5E9</span>
+          <span class="text-red text-xs">000111011010010111101001</span>
+        </div>
+      </div>
+      <div class="flex flex-row gap-4">
+        <div class="flex flex-col justify-center items-center">
+          <Beetle fill="#239B6C" class="w-30" showFitnessScore="true"/>
+          <span>239B6C</span>        
+          <span class="text-blue text-xs">001000111001101101101100</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex flex-row justify-center items-center p-2">
+    <div class="flex flex-col items-center p-2">
+      <Beetle fill="#A1F0B8" class="w-30" showFitnessScore="true"/>
+      <span>A1F0B8</span>
+      <span class="text-xs"><span class="text-red">1010000111110000</span> <span class="text-blue">10111000</span></span>
+    </div>
+    <div class="flex flex-col items-center p-2">
+      <Beetle fill="#C83E4A" class="w-30" showFitnessScore="true"/>
+      <span>C83E4A</span>
+      <span class="text-xs"><span class="text-blue">1100100000111110</span> <span class="text-red">01001010</span></span>
+    </div>
+    <carbon:arrow-right class="inline"/>
+    <div class="flex flex-row gap-4">
+      <div class="flex flex-row gap-4">
+        <div class="flex flex-col justify-center items-center">
+          <Beetle fill="#A1F04A" class="w-30" showFitnessScore="true"/>
+          <span>A1F04A</span>
+          <span class="text-red text-xs">101000011111000001001010</span>
+        </div>
+      </div>
+      <div class="flex flex-row gap-4">
+        <div class="flex flex-col justify-center items-center">
+          <Beetle fill="#B8C83E" class="w-30" showFitnessScore="true"/>
+          <span>B8C83E</span>        
+          <span class="text-blue text-xs">101110001100100000111110</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex flex-row justify-center items-center p-2">
+    <div class="flex flex-col items-center p-2">
+      <Beetle fill="#1D9B6C" class="w-30" showFitnessScore="true"/>
+      <span>23A5E9</span>
+      <span class="text-xs"><span class="text-red">000111011001</span> <span class="text-blue">101101101100</span></span>
+    </div>
+    <div class="flex flex-col items-center p-2">
+      <Beetle fill="#6E1B4C" class="w-30" showFitnessScore="true"/>
+      <span>23A5E9</span>
+      <span class="text-xs"><span class="text-blue">011011100001</span> <span class="text-red">101101001100</span></span>
+    </div>
+    <carbon:arrow-right class="inline"/>
+    <div class="flex flex-row gap-4">
+      <div class="flex flex-row gap-4">
+        <div class="flex flex-col justify-center items-center">
+          <Beetle fill="#1D9B4C" class="w-30" showFitnessScore="true"/>
+          <span>1D9B4C</span>
+          <span class="text-red text-xs">000111011001101101001100</span>
+        </div>
+      </div>
+      <div class="flex flex-row gap-4">
+        <div class="flex flex-col justify-center items-center">
+          <Beetle fill="#B6C6E1" class="w-30" showFitnessScore="true"/>
+          <span>B6C6E1</span>        
+          <span class="text-blue text-xs">101101101100011011100001</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
