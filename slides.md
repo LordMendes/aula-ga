@@ -471,6 +471,33 @@ transition: slide-up
 
 # Ciclo Evolutivo
 
-<div class="w-auto flex justify-center ">
-  <!-- <img src="https://github.com/LordMendes/aula-ga/blob/master/assets/conceitos/workflow.png?raw=true" class="h-100"/> -->
+<!-- <div class="w-auto flex justify-center ">
+  <img src="https://github.com/LordMendes/aula-ga/blob/master/assets/conceitos/workflow.png?raw=true" />
+</div> -->
+<iframe style="border:none" width="800" height="350" src="https://whimsical.com/embed/NWa2SXeViWnGZHyQSbtoN5@2Ux7TurymMTECoQFAE16"></iframe>
+
+
+---
+layout: default
+transition: slide-up
+---
+
+# Ciclo Evolutivo
+
+Juntando todos os conceitos com o nosso exemplo de besouros teríamos algo assim:
+## Primeiramente iniciamos uma população com N indivíduos aleatórios
+<div grid="~ cols-6">
+  <img src="https://github.com/LordMendes/aula-ga/blob/master/assets/besouros/besouro-amarelo.png?raw=true" />
+  <img src="https://github.com/LordMendes/aula-ga/blob/master/assets/besouros/besouro-rosa.png?raw=true" />
+  <img src="https://github.com/LordMendes/aula-ga/blob/master/assets/besouros/besouro-vermelho.png?raw=true" />
+  <img src="https://github.com/LordMendes/aula-ga/blob/master/assets/besouros/besouro-preto.png?raw=true" />
+  <img src="https://github.com/LordMendes/aula-ga/blob/master/assets/besouros/besouro-azul.png?raw=true" />
+  <img src="https://github.com/LordMendes/aula-ga/blob/master/assets/besouros/besouro-verde.png?raw=true" />
 </div>
+
+---
+layout: default
+transition: slide-up
+---
+
+# Pressão Evolutiva
