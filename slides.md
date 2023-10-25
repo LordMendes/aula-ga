@@ -345,14 +345,7 @@ Com base no exemplo anterior conseguimos ver como as alterações vão acontecer
   <img src="https://github.com/LordMendes/aula-ga/blob/master/assets/conceitos/crossover.png?raw=true" class="h-60">
 </div>
 
-<!--   
-- **Indivíduo**: Uma representação de uma possível solução para o problema.
-- **População**: Um conjunto de indivíduos que representam possíveis soluções para o problema.
-- **Aptidão**: Uma medida de quão bem um indivíduo resolve o problema.
-- **Reprodução**: O processo de geração de novos indivíduos a partir de indivíduos existentes.
-- **Seleção**: O processo de escolha dos indivíduos mais aptos para se reproduzirem.
-- **Mutação**: O processo de introdução de alterações aleatórias em indivíduos. 
-- -->
+
 
 ---
 layout: default
@@ -360,3 +353,120 @@ transition: slide-up
 ---
 
 # Seleção \ Selection
+
+## O processo de escolha dos indivíduos mais aptos para se reproduzirem.
+
+Existem diversos métodos de seleção, vamos falar aqui de 2 dos principais:
+- **Torneio (Tournament)**
+- **Roleta (Roulette)**
+  - Normal
+  - "Viciada"
+  
+
+---
+layout: two-cols
+transition: slide-up
+---
+
+# Roleta Comum
+
+Nesse método escolhemos n indivíduos de uma maneira completamente aleatória para realizar  o crossover
+
+<div class="w-auto flex justify-center">
+  <img src="https://github.com/LordMendes/aula-ga/blob/master/assets/conceitos/roleta.png?raw=true" class="h-60"/>
+</div>
+
+::right::
+# Roleta Viciada
+Aqui a roleta é viciada, ou seja os indivíduos com a maior fitness da população tem mais chances de serem selecionados
+
+<div class="w-auto flex justify-center">
+  <img src="https://github.com/LordMendes/aula-ga/blob/master/assets/conceitos/roleta-viciada.png?raw=true" class="h-60"/>
+</div>
+
+
+---
+layout: default
+transition: slide-up
+---
+
+# Torneio (Tournament)
+
+Provavelmente o método mais usado, o torneio se dá da seguinte forma:
+- 2 ou mais membros são escolhidos aleatoriamente na população
+- É feita uma comparação entre os dois e selecionamos o com a maior fitness para o crossover
+  
+---
+layout: default
+transition: slide-up
+---
+# Mutação / Mutation
+## O processo de introdução de alterações aleatórias em indivíduos.
+
+O processo de mutação pode ocorrer em qualquer momento do ciclo evolutivo, ele implica em uma mudança (geralmente) aleatória no gene do indivíduo
+
+### Tipos de mutação
+
+- **Mutação de ponto único**: Uma alteração aleatória é feita em um único gene.
+- **Mutação multiponto**: Várias alterações aleatórias são feitas em vários genes.
+- **Mutação de substituição**: Um gene é substituído por outro gene aleatório.
+- **Mutação de inversão**: Uma seção de genes é invertida.
+- **Mutação de transposição**: Dois genes são trocados de lugar.
+
+---
+layout: default
+transition: slide-up
+---
+# Mutação / Mutation
+
+<!--
+Desenhar como funcionam as mutações
+-->
+
+---
+layout: two-cols
+transition: slide-up
+---
+# Vantagens
+<div class="p-4">
+
+  - Ajuda a garantir que o algoritmo não fique preso em um máximo local.
+  - Pode ajudar a explorar novas soluções.
+  - Pode ajudar a evitar que o algoritmo encontre um ótimo local local que não seja a solução ótima.
+
+  <div class="w-auto flex justify-center">
+    <img src="https://i.stack.imgur.com/XaKx6.png" class="h-40 mt-4"/>
+  </div>
+
+
+<!--
+  o exemplo demonstra a variação que uma única mutação pode causar
+-->
+</div>
+
+
+::right::
+# Desvantagens
+<div class="p-4">
+
+  - Pode causar alterações que prejudicam a aptidão dos indivíduos.
+  - Pode reduzir a eficiência do algoritmo genético.
+  
+  <div class="w-auto flex flex-col items-center mt-30">
+    <h3 class="mb-4">Ponto único</h3>
+    <div><span class="color-red">1</span>1111111 = 255</div>
+    <div><span class="color-red">0</span>1111111 = 127</div>
+  </div>
+
+</div>
+
+<!--
+O exemplo do ponto único representa tanto uma vantagem quanto uma desvantagem
+-->
+
+---
+layout: default
+transition: slide-up
+---
+
+# Ciclo Evolutivo
