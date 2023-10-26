@@ -33,7 +33,7 @@ Resolvendo problemas baseado na natureza
   <button @click="$slidev.nav.openInEditor()" title="Open in Editor" class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
     <carbon:edit />
   </button>
-  <a href="https://github.com/slidevjs/slidev" target="_blank" alt="GitHub" title="Open in GitHub"
+  <a href="https://github.com/LordMendes" target="_blank" alt="GitHub" title="Open in GitHub"
     class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
     <carbon-logo-github />
   </a>
@@ -860,3 +860,153 @@ Um GA assim como todo código não vai rodar de forma esperada desde o começo.
 <div class="flex justify-center items-center">
   <img src="https://miro.medium.com/v2/resize:fit:1400/1*bp4cwdGXkfE2RzZclJ6VRw.jpeg" class="h-60"/>
 </div>
+
+
+---
+layout: section
+transition: slide-up
+background: assets/artigo/capa.png
+---
+# Uso real
+ROI Extraction in Thermographic Breast Images
+Using Genetic Algorithms
+<br/><i class="text-sm">L. C. Mendes, E. O. Rodrigues, S. C. Izidoro, A. Conci and P. Liatsis</i>
+
+
+---
+layout: default
+transition: slide-up
+---
+# Definição do problema
+## Segmentar a região de interesse em termografias de mama
+<div class="p-8 flex justify-center items-center ">
+  <img src="assets/artigo/roi.png" class="max-h-80"/>
+</div>
+
+---
+layout: two-cols
+transition: slide-up
+---
+# Definição do Indivíduo
+
+## Fenótipo
+
+- Uma cardioide representada por:
+  - Coordenada X
+  - Coordenada Y
+  - Tamanho
+
+::right::
+<div class="mb-22" ></div>
+
+## Genótipo
+
+- O cromossomo seria um binário (gray code) de 10 dígitos para cada uma das representações
+```python
+class Individual:
+  cardioid = Cardioid()
+
+class Cardioid:
+  x_coordinate = Coordinate()
+  y_coordinate = Coordinate()
+  size = Coordinate()
+
+class Coordinate:
+  decimal
+  binary
+  gray_code
+```
+
+<!--
+10 digitos era o menor valor para representar a maior dimensão da imagem
+-->
+
+
+---
+layout: default
+transition: slide-up
+---
+
+# Fitness
+
+1. Tendo em vista que a imagem é monocromática (somente 1 canal, o RGB por exemplo são 3)
+Ao analisar uma amostragem das termografias eu notei que os pixels brancos (áreas com mais calor) circundavam a região de interesse
+e também que o fundo sempre era composto de pixels pretos
+
+<div class="p-8 flex justify-center items-center ">
+  <img src="assets/artigo/roi.png" class="max-h-40"/>
+</div>
+
+2. Com base nessa observação optei por usar o valor da cor dos pixels dentro da cardioide como uma forma de pontuar o individuo
+
+
+---
+layout: default
+transition: slide-up
+---
+
+# Fitness
+
+3. Com isso em mente defini 4 ranges dentro do canal de cor e penalizar ou gratificar o individuo de acordo com isso
+```python
+  color_interval = [0, 45, 140, 200, 256]
+  color_weights = [-25, 5, 25, -27.5]
+```
+
+4. No fim a fitness é uma média ponderada da quantidade dos pixels dentro de cada range
+   
+```python
+def fitness():
+  ...
+  # Calculate the total color score.
+  total_color_score = sum(
+      color_weights[i] * pixel_volume[i] for i in range(4))
+
+  # Calculate the fitness score.
+  fitness_score = total_color_score / abs(total_weight)
+
+  self.score = fitness_score
+  return fitness_score
+```
+
+---
+layout: section
+transition: slide-up
+---
+
+# Código do artigo
+https://github.com/LordMendes/ROI-Extraction-in-Thermographic-Breast-Images-Using-Genetic-Algorithms
+
+
+---
+layout: section
+---
+
+# Execício
+
+Uma empresa de manufatura está tentando otimizar sua produção para maximizar a eficiência e minimizar os custos. A empresa produz três tipos de produtos, A, B e C, e deseja determinar a melhor alocação de recursos para maximizar o lucro total. Cada produto requer diferentes recursos, tempo e mão de obra para ser produzido. A empresa tem um orçamento fixo para cada período de produção e quer encontrar a alocação ideal de recursos que maximiza o lucro total.
+
+Os recursos disponíveis são limitados e incluem matérias-primas, horas de trabalho e espaço de armazenamento. Cada produto tem uma demanda de mercado específica e uma margem de lucro associada. Além disso, existem restrições de tempo, espaço e recursos que devem ser consideradas durante o processo de produção. A empresa deseja encontrar a melhor combinação de quantidades de produtos A, B e C a serem produzidos, levando em consideração as restrições mencionadas.
+
+---
+layout: section
+---
+## Características
+
+| Característica            | Produto A | Produto B | Produto C |
+|---------------------------|-----------|-----------|-----------|
+| Tempo de produção (horas) | 1         | 2         | 3         |
+| Valor (R$)                | 100       | 200       | 300       |
+| Espaço ocupado (m²)       | 1         | 2         | 3         |
+
+## Restrições
+
+- Orçamento: R$ 10.000
+- Tempo de trabalho: 100 horas
+- Espaço de armazenamento: 100 m²
+
+---
+layout: center
+---
+# Valeu!
+# Obrigado!
