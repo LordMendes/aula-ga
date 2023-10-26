@@ -880,7 +880,7 @@ transition: slide-up
 # Definição do problema
 ## Segmentar a região de interesse em termografias de mama
 <div class="p-8 flex justify-center items-center ">
-  <img src="assets/artigo/roi.png" class="max-h-80"/>
+  <img src="https://github.com/LordMendes/aula-ga/blob/master/assets/artigo/roi.png?raw=true" class="max-h-80"/>
 </div>
 
 ---
