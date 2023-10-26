@@ -15,9 +15,13 @@ const props = defineProps({
   showFitnessScore: {
     default: false,
   },
+  size: {
+    default: 50,
+  },
 });
 
 const fillColor = ref(props.fill ? props.fill : hex);
+const size = ref(props.size ? props.size : 50);
 
 // Function to calculate fitness score
 const calculateFitnessScore = (color) => {
@@ -47,9 +51,9 @@ const fitnessScore = calculateFitnessScore(fillColor.value).toPrecision(2);
       version="1.0"
       xmlns="http://www.w3.org/2000/svg"
       width="400.000000pt"
-      height="30.000000pt"
       viewBox="0 0 527.000000 474.000000"
       preserveAspectRatio="xMidYMid meet"
+      :height="size"
     >
       <g
         transform="translate(0.000000,474.000000) scale(0.100000,-0.100000)"
