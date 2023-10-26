@@ -934,10 +934,10 @@ Ao analisar uma amostragem das termografias eu notei que os pixels brancos (áre
 e também que o fundo sempre era composto de pixels pretos
 
 <div class="p-8 flex justify-center items-center ">
-  <img src="assets/artigo/roi.png" class="max-h-40"/>
+  <img src="https://github.com/LordMendes/aula-ga/blob/master/assets/artigo/roi.png?raw=true" class="max-h-40"/>
 </div>
 
-2. Com base nessa observação optei por usar o valor da cor dos pixels dentro da cardioide como uma forma de pontuar o individuo
+1. Com base nessa observação optei por usar o valor da cor dos pixels dentro da cardioide como uma forma de pontuar o individuo
 
 
 ---
